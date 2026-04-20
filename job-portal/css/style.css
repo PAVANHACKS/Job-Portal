@@ -1,0 +1,473 @@
+/* ===================== */
+/* RESET */
+/* ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== */
+/* BODY */
+/* ===================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* ===================== */
+/* NAVBAR */
+/* ===================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #020617;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #facc15;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* DARK MODE BUTTON */
+.mode-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* PROFILE */
+.profile {
+    position: relative;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #facc15;
+}
+
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px;
+    color: black;
+}
+
+.dropdown a:hover {
+    background: #f1f1f1;
+}
+
+/* ===================== */
+/* HERO CLEAN FULL PAGE */
+/* ===================== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+    url('https://s.tmimgcdn.com/scr/1200x750/69300/dream-job-job-portal-multipage-html5-website-template_69319-0-original.jpg') no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* HERO TEXT */
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+/* SEARCH BAR */
+.hero-search {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-search input {
+    padding: 14px;
+    width: 220px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.hero-search button {
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #facc15;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-search button:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== */
+/* STATS (NO BOXES) */
+/* ===================== */
+.stats {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 60px;
+}
+
+.stat-box {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-box h2 {
+    font-size: 34px;
+    color: #facc15;
+}
+
+.stat-box p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ===================== */
+/* JOB CARDS */
+/* ===================== */
+.job-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.job-card {
+    background: white;
+    width: 280px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.job-card:hover {
+    transform: translateY(-8px);
+}
+
+.job-card p {
+    color: #555;
+}
+
+/* APPLY BUTTON */
+.apply-btn {
+    background: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #388e3c;
+}
+
+/* ===================== */
+/* SECTION CONTROL */
+/* ===================== */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* ===================== */
+/* DARK MODE */
+/* ===================== */
+.dark-mode {
+    background: #020617;
+}
+
+.dark-mode .navbar {
+    background: #000;
+}
+
+.dark-mode .job-card {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode .dropdown {
+    background: #1e293b;
+}
+
+.dark-mode .dropdown a {
+    color: white;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+    color: white;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-search {
+        flex-direction: column;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .job-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ===================== */
+/* PREPARATION SECTION */
+/* ===================== */
+
+.prep-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+}
+
+.prep-card {
+    width: 200px;
+    padding: 25px;
+    text-align: center;
+    background: #1e293b;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.prep-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: #334155;
+}
+
+.prep-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===================== */
+/* COMPANIES SECTION */
+/* ===================== */
+
+.company-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.company-card {
+    background: #1e293b;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: white;
+}
+
+.company-card:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.company-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.company-card a:hover {
+    background: #16a34a;
+}
+
+/* ===================== */
+/* DSA SECTION */
+/* ===================== */
+
+.dsa-topics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.dsa-card {
+    background: #1e293b;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.dsa-card:hover {
+    background: #334155;
+    transform: scale(1.08);
+}
+
+/* FILTER BUTTONS */
+.dsa-filter {
+    text-align: center;
+    margin: 15px;
+}
+
+.dsa-filter button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #facc15;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dsa-filter button:hover {
+    background: #eab308;
+}
+
+/* DSA CONTENT */
+.dsa-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ROADMAP BUTTON */
+.roadmap-btn {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background: #22c55e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.roadmap-btn:hover {
+    background: #16a34a;
+}
+
+/* ===================== */
+/* DARK MODE SUPPORT (NEW SECTIONS) */
+/* ===================== */
+
+.dark-mode .prep-card,
+.dark-mode .company-card,
+.dark-mode .dsa-card {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode .company-card a,
+.dark-mode .roadmap-btn {
+    background: #22c55e;
+}
+
+/* ===================== */
+/* SMOOTH ANIMATIONS */
+/* ===================== */
+
+.prep-card,
+.company-card,
+.dsa-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prep-card:hover,
+.company-card:hover,
+.dsa-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
